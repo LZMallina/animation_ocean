@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Learning Animation </title>
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:10px;
+}
+body{
+    height:auto;
+    background-image: linear-gradient(black, #000099, #66c2ff,#ffcccc,#ffeee6,#66c2ff);
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+h1{
+    position:fixed;
+    font-size:5rem;
+    font-family:'Great Vibes',cursive;
+    color:#b4b6bd;
+    left:12%;
+    top:7%;
+    
+}
+@media (max-width:800px){
+    h1{
+        font-size:3rem;
+    }
+}
+.waves{
+    position:fixed;
+    border-radius:45%;
+    width:27vw;
+    height:27vw;
+    bottom:-23vw; 
+    animation-name: spin;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in;
+    background:#5e91c1;
+}
+@media (max-width:800px){
+    .waves{
+        bottom:-16vw;
+    }
+}
+#wave-1{
+    opacity:0.75;
+    left:-6%;
+}
+#wave-2{
+    opacity:0.35;
+    left:5%;
+}
+#wave-3{
+    opacity:0.75;
+    left:18%;
+}
+#wave-4{
+    opacity:0.35;
+    left:30%;
+}
+#wave-5{
+    opacity:0.75;
+    left:40%;
+}
+#wave-6{
+    opacity:0.35;
+    left:50%;
+}
+#wave-7{
+    opacity:0.75;
+    left:60%;
+}
+#wave-8{
+    opacity:0.35;
+    left:70%;
+}
+#wave-9{
+    opacity:0.75;
+    left:80%;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+
+.star{
+    background:white;
+    position:fixed;
+    border-radius:50%;
+    animation-name:twinkle;
+    animation-iteration-count:infinite;
+}
+#star-1{
+    width:1.5vw;
+    height:1.5vw;
+    left:55vw;
+    top:15vw;
+    animation-duration:2s;
+}
+#star-2{
+    width:1vw;
+    height:1vw;
+    left:60vw;
+    top:10vw;
+    animation-duration:1s;
+}
+#star-3{
+    width:2vw;
+    height:2vw;
+    left:80vw;
+    top:10vw;
+    animation-duration:3s;
+}
+#star-4{
+    width:0.5vw;
+    height:0.5vw;
+    left:75vw;
+    top:10vw;
+    animation-duration:1.2s;
+}
+#star-5{
+    width:2.5vw;
+    height:2.5vw;
+    left:45vw;
+    top:5vw;
+    animation-duration:2s;
+}
+@keyframes twinkle{
+   50%{ transform:scale(0.5);
+       opacity:0.5;
+     }
+    }
+#moon{
+    background:transparent;
+    position:absolute;
+    left:12rem;
+    width:15vw;
+    height:15vw;
+    border-radius:50%;
+    box-shadow: 25px 25px 10px 0px white; 
+    z-index:-1;
+}
+
+img{ 
+    position:fixed;
+    width:100px;
+    bottom:7%;
+    animation-name:sails;
+    animation-duration:20s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    
+}
+@keyframes sails{
+    0%{ left:-6%;}
+    10%{ left:5%; transform:rotate(-5deg);}
+    20%{left:18%;}
+    30%{left:30%; transform:rotate(5deg);}
+    40%{left:40%;}
+    50%{left:50%; transform:rotate(-5deg);}
+    60%{left:60%;}
+    70%{left:70%; transform:rotate(5deg);}
+    80%{left:80%;}
+    90%{left:90%; transform:rotate(-5deg);}
+    100%{left:100%;}
+    
+}
+#beach{
+    position:fixed;
+    top:4%;
+    left:90%;
+    width:100px;
+    height:30px;
+}
+</style>
+</head>
+<body>
+<h1>LZM</h1>
+
+<div class="waves" id="wave-1"></div>
+<div class="waves" id="wave-2"></div>
+<div class="waves" id="wave-3"></div>
+<div class="waves" id="wave-4"></div>
+<div class="waves" id="wave-5"></div>
+<div class="waves" id="wave-6"></div>
+<div class="waves" id="wave-7"></div>
+<div class="waves" id="wave-8"></div>
+<div class="waves" id="wave-9"></div>
+
+<div class="star" id="star-1"></div>
+<div class="star" id="star-2"></div>
+<div class="star" id="star-3"></div>
+<div class="star" id="star-4"></div>
+<div class="star" id="star-5"></div>
+
+<div id="moon"></div>
+
+<img src="./needpix_com_edited_image.png" alt="silhouette sailboat">
+
+
+<audio autoplay loop controls id="beach">
+<source src="beach3.mp3" type="audio/mpeg"/>
+</audio>
+
+</body>
+</html>
